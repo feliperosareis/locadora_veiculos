@@ -1,0 +1,63 @@
+.form_container .background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 255px;
+    margin-right: 0;
+    background: gray;
+    z-index: 60;
+    height: 100%;
+}
+.container-fluid{ /*Ajust no container para formulário fixo na esquerda*/
+    padding-right: 255px;
+    padding-left: 0;
+}
+@media (min-width: 992px){
+    .container {/*Ajust no container para formulário fixo na esquerda*/
+        width: 100%;
+    }
+}
+@media (min-width: 1370px){
+    .container {/*Ajust no container para formulário fixo na esquerda*/
+        width: 1170px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .form_container form {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .form_container .background {
+        width: 232px;
+        margin-right: 0px;
+    }
+}
+
+@media ( max-width: 1024px ) {
+    .form_container form {
+        padding: 15px 30px 30px 30px;
+    }
+
+    .form_container .top h1 {
+        font-size: 30px;
+    }
+}
+
+@media ( max-width: 992px ) {
+    .form_container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+        display: flex;
+        margin: 30px 0;
+        height: auto;
+    }
+
+    .form_container .background {
+        position: relative;
+        width: 100%;
+        margin-right: 0;
+    }
+}

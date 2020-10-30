@@ -1,0 +1,461 @@
+/* Default form */
+.form_container .background {
+    display: block;
+    width: 247px;
+    background: gray;
+    border: 1px solid #ccc;
+    float: right;
+    position: relative;
+    margin-right: 15px;
+}
+.form_container .form-control,.form_container .custom-select {
+    padding: 6px;
+    height: 31px;
+    margin-bottom:0;
+    border-radius: 0;
+    font-size: 12px;
+    border:none;
+    border-bottom:solid 1px #808080;
+    border-right:solid 1px #808080;
+}
+.form_container .custom-select{
+    width: 100%;
+    padding-right: 20px;
+}
+.form_container textarea.form-control {
+    width: 100%;
+    height: 60px;
+    max-width: 100%;
+    max-height: 70px !important;
+}
+.form_container form{
+    float: left;
+    width: 100%;
+    padding: 15px 30px 30px 30px;
+    position: relative;
+}
+.form_container a.font-termos {
+    font-size: 10px;
+    color: #fff;
+    position: relative;
+    margin-top: 4px;
+    outline: none !important;
+}
+.form_container .custom-control{
+    margin:5px 0 0 0;
+    vertical-align: middle;
+}
+.custom-control-input:checked~.custom-control-indicator {background-color: #28a745;}
+.form_container [class^=col-]{
+    padding-left:0;
+    padding-right:0;
+}
+.form_container .return {
+    cursor: pointer;
+    color: #707070;
+}
+.form_container button {
+    width: 100%;
+    background: darkgray;
+    color: white;
+    border-radius: 0;
+    font-size: 17px;
+    outline: none !important;
+    padding: 6px 12px;
+    margin: 10px 0 0 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.form_container button:hover {
+    color: white;
+    background: #0e0e0e;
+}
+.form_container h1 {
+    font-weight: normal;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.form_container h2 {
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/*PlaceHolder*/
+input, textarea, select.form-control { color: #5b5b5b; }
+.placeholder { color: #5b5b5b !important; }
+/*Bordas dos Formulários com erro*/
+.border_form_error{
+    border: 1px solid red !important;
+    border-radius: 3px !important;
+}
+.border_form_error[type="radio"],.border_form_error[type="checkbox"]{
+    border: none !important;
+    outline: 1px solid red !important;
+}
+
+#form_financiamento, #form_cotacao {
+    position: relative;
+    float: left;
+}
+
+.check_politica{
+    padding: 0px;
+    line-height: 10px;
+    height: 14px;
+    width: 14px;
+}
+
+.form_fixed p {
+    margin: 15px 0;
+    font-size: 11px;
+    color: white;
+}
+
+
+.load_form{
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    text-align: center;
+    background: rgba(0,0,0,0.8);
+}
+
+#form form h2 {
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        background: rgb(255,255,255);
+    }
+}
+
+.loading {
+    position: relative;
+    top: 50%;
+    margin: -45px auto 0 auto;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    border: .46rem solid orange;
+    border-top-color: rgb(255,255,255);
+    animation: spin 1s infinite linear;
+}
+
+.form_response{
+    position: absolute;
+    display: none;
+    padding-top: 60px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    text-align: center;
+    background: rgba( 0, 0, 0, 0.8 ) !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+    font-size: 18px;
+    color: #fff;
+
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.form_response img.check {margin-bottom: 10px;}
+form .modal-closet {
+    float: right;
+    color: white;
+}
+
+.solicite_pop {
+    background: gray;
+    width: 190px;
+    position: absolute;
+    padding: 15px;
+    left: -240px;
+    top: 0px;
+    z-index: 99;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.solicite_pop label {
+    margin-bottom: 0;
+    color: #00ff77;
+    font-size: 14px;
+}
+
+.solicite_pop p {
+    font-size: 12px !important;
+    margin: 0;
+}
+
+.solicite_pop .triangule {
+    position: absolute;
+    right: -10px;
+    top: 25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent gray;
+}
+
+
+.form_response .nome{
+    color: #4ba14a;
+    font-weight: bold;
+}
+
+.form_response .fa-check {
+    font-size: 50px;
+    color: #ff8121;
+}
+
+#container_form_financiamento, #container_form_cotacao{
+    position: relative;
+    font-family: arial;
+}
+
+.border-error{
+    outline: 1px solid red;
+}
+
+.lazy {
+    display: none;
+}
+
+.pad {
+    padding: 0;
+}
+
+.p_left {
+    padding-left: 0;
+}
+
+.p_right {
+    padding-right: 0;
+}
+
+#cboxContent{
+    border: 1px solid black !important;
+}
+
+#privacidade .modal-body {
+    height: 500px;
+    overflow-y: auto;
+}
+/* tooltip */
+.form_container .tooltip.top{
+    border-bottom: none;
+    left:0 !important;
+}
+.form_container .tooltip-inner{
+    background: #9daeb7;
+}
+.form_container .tooltip.top .tooltip-arrow{
+    border-top-color: #9daeb7;
+
+}
+.form_container .tooltip.top, .form_container .tooltip.top:hover{
+    background: transparent;
+    border-bottom: none;
+    padding: 5px 0;
+}
+.form_container .tooltip.top{
+    left: 0 !important;
+    float: left;
+    width: auto;
+    margin-bottom: -29px;
+}
+/* tooltip /end */
+
+.form_orcamento div.btn-toggle-form, .form_fixed div.btn-toggle-form{
+    position: absolute;
+    top:0;
+    right: 0;
+    color:#fff;
+    width: 600%;
+    transition: all 0.3s ease;
+    text-align: left;
+    padding: 0;
+    background: #91989c;
+    font: 12px/34px arial;
+    cursor: pointer;
+}
+.financiamento-block{
+    overflow: hidden;
+    width: 100%;
+}
+.form_orcamento div.btn-toggle-form:hover,  .form_fixed div.btn-toggle-form:hover {
+    background: #7a7e82;
+}
+.form_orcamento div.btn-toggle-form.active, .form_fixed div.btn-toggle-form.active {
+    overflow: hidden;
+    right: -500%;
+}
+.form_orcamento div.btn-toggle-form i, .form_fixed div.btn-toggle-form i{
+    text-align: center;
+    font-size: 16px;
+    margin: 0px 10px;
+}
+
+.bootstrap-select.form-control:not([class*=col-]){
+    padding: 0;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:active,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:focus,
+.bootstrap-select>.dropdown-toggle.bs-placeholder:hover,
+.btn-group > .btn:first-child{
+    background: #fff;
+    border-radius: 0;
+    border: none;
+    height: 31px;
+    font-size: 12px;
+    color: #495057;
+    font-weight: normal;
+    margin-top: 0;
+    padding: 5px 20px 5px 8px;
+    background: #fff url("//assets/img/site/common/select-arrow.png") no-repeat right 5px center;
+    border-bottom: solid 1px #808080;
+    border-right: solid 1px #808080;
+}
+.bootstrap-select.btn-group .dropdown-menu{
+    border-radius: 0;
+    margin-top: -2px;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: #868E96;
+}
+
+.dropdown-menu .show ul.dropdown-menu {
+    display: block;
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+    padding: 0px;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+    padding: 0;
+}
+
+.bootstrap-select.show>.dropdown-menu>.dropdown-menu {
+    display: block;
+}
+
+.bootstrap-select > .dropdown-menu > .dropdown-menu li.hidden{
+    display:none;
+}
+
+.bootstrap-select > .dropdown-menu > .dropdown-menu li a{
+    display: block;
+    width: 100%;
+    padding: 3px 8px;
+    color: #868E96;
+    clear: both;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+    height: 31px;
+    padding: 5px 20px 5px 8px;
+}
+
+
+ @media screen and (max-width: 1200px){
+    .form_container form {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .form_container .background {
+        width: 232px;
+        margin-right: 0px;
+    }
+}
+
+@media ( max-width: 1024px ) {
+    .form_fixed .pad, .form_fixed .p_left, .form_fixed .p_right {
+        padding: 0;
+    }
+
+    .form_container form {
+        padding: 15px 30px 30px 30px;
+    }
+
+    .form_container .top h1 {
+        font-size: 30px;
+    }
+
+    #form .col-md-offset-9 {
+        width: 100%;
+    }
+
+    #form .col-md-offset-9 {
+        margin: 0;
+    }
+}
+
+@media ( max-width: 992px ) {
+
+    .form_container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+        display: flex;
+        margin: 30px 0;
+        height: auto;
+    }
+
+    .form_container .background {
+        width: 100%;
+        margin-right: 0;
+    }
+}

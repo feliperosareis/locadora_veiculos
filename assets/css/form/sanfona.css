@@ -1,0 +1,21 @@
+.form_container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 60;
+    transition: top 0.3s ease-in-out;
+    -webkit-transition: top 0.3s ease-in-out;
+    -moz-transition: top 0.3s ease-in-out;
+    -ms-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+}
+.form_container.form-topo{
+    top:20px;
+    transition: top 0.3s ease-in-out;
+    -webkit-transition: top 0.3s ease-in-out;
+    -moz-transition: top 0.3s ease-in-out;
+    -ms-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+}

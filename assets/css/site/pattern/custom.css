@@ -1,0 +1,70 @@
+@font-face{
+    font-family: 'Opensans';
+    src:url("//assets/fonts/OpenSans.woff") format("woff"),
+        url("//assets/fonts/OpenSans.ttf") format("ttf"),
+        url("//assets/fonts/OpenSans.svg") format("svg"),
+        url("//assets/fonts/OpenSans.eot?#iefix") format("embedded-opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Opensans';
+    src:url("//assets/fonts/OpenSans-Bold.woff") format("woff"),
+    url("//assets/fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("//assets/fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Padronizar estilos de fonte */
+body {
+    font-family: 'OpenSans';
+    color: black;
+    font-size: 14px;
+}
+
+/* FONTS & TITLES */
+h1,h2,h3,h4,h5,h6,strong,b{font-weight: bold;}
+.font-50{font-size: 50px;}
+.font-40{font-size: 40px;}
+.font-36{font-size: 36px;}
+.font-30{font-size: 30px;}
+.font-24{font-size: 24px;}
+.font-20{font-size: 20px;}
+.font-22{font-size: 22px;}
+.font-18{font-size: 18px;}
+.font-16{font-size: 16px;}
+.font-14{font-size: 14px;}
+.font-12{font-size: 12px;}
+/* FONTS & TITLES */
+
+/* FORM ONPAGE /END */
+.map-canvas{
+    width: 100%;
+    height: 300px;
+    background: #ccc;
+}
+/* BOX & GENERAL*/
+
+.color-white {
+    color: white;
+}
+
+.bg-gray-dark {
+    background: #303030;
+}
+
+.bg-interess {
+    background: #ffb302;
+}
+
+.box-preco {
+    background: black;
+}
+
+.box-preco img {
+    position: absolute;
+    top: -20px;
+    right: 35px;
+}

@@ -1,0 +1,79 @@
+SetEnv   LC_ALL  pt_BR.UTF-8
+AddDefaultCharset utf-8
+php_value session.auto_start 1
+# added assets because we are using grocery CRUD
+
+<IfModule mod_rewrite.c>
+
+#RewriteEngine On
+##First rewrite any request to the wrong domain to use the correct one (here www.)
+
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} !=127.0.0.1
+RewriteCond %{REMOTE_ADDR} !=127.0.0.1
+RewriteCond %{REMOTE_ADDR} !=::1
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+ 
+#
+#RewriteCond %{HTTP:X-Forwarded-Proto} =http
+#RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteCond $1 !^(index\.php|info\.php|css|js|img|assets|images|tools/gendata|robots\.txt|sitemap\.xml)
+	RewriteRule ^(.*)$ index.php/$1 [L]
+</IfModule>
+
+php_value max_input_vars 10000
+
+# se der erro "no input file" quando vc publicar o site,
+# normalmente é má configuração do nginx
+# tem que mudar um pouco este arquivo daí. Fica assim
+#
+# Muda que vc declara a mais:
+#   Options +FollowSymLinks
+#   RewriteBase /_test/
+#
+# E troca a linha da regra do rewrite por:
+#   RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+#
+# Ficando assim:
+#
+#<IfModule mod_rewrite.c>
+#	RewriteEngine on
+#       Options +FollowSymLinks
+#	RewriteBase /_test/
+#	RewriteCond $1 !^(index\.php|css|js|img|assets|images|tools/gendata|robots\.txt)
+#	RewriteRule ^(.*)$ index.php?/$1 [QSA,L]
+#</IfModule>
+
+#ExpiresActive On
+#ExpiresDefault "access plus 3 months"
+#ExpiresByType image/gif "access plus 3 months"
+#ExpiresByType image/png "access plus 3 months"
+#ExpiresByType image/jpeg "access plus 3 months"
+#ExpiresByType image/pjpeg "access plus 3 months"
+#ExpiresByType text/javascript "modification plus 3 months"
+#ExpiresByType application/javascript "modification plus 3 months"
+#ExpiresByType text/css "modification plus 3 months"
+
+<ifModule mod_headers.c>
+  <filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </filesMatch>
+  <filesMatch "\.(css)$">
+    Header set Cache-Control "max-age=604800, public"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "max-age=216000, private"
+  </filesMatch>
+  <filesMatch "\.(xml|txt)$">
+    Header set Cache-Control "max-age=216000, public, must-revalidate"
+  </filesMatch>
+  <filesMatch "\.(html|htm|php)$">
+    Header set Cache-Control "max-age=1, private, must-revalidate"
+  </filesMatch>
+</ifModule>

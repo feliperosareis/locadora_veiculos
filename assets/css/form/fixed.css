@@ -1,0 +1,24 @@
+.form_container .background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 255px;
+    margin-right: 0;
+    background: gray;
+    z-index: 60;
+    height: 100%;
+}
+.container-fluid{ /*Ajust no container para formulário fixo na esquerda*/
+    padding-right: 255px;
+    padding-left: 0;
+}
+@media (min-width: 992px){
+    .container {/*Ajust no container para formulário fixo na esquerda*/
+        width: 100%;
+    }
+}
+@media (min-width: 1370px){
+    .container {/*Ajust no container para formulário fixo na esquerda*/
+        width: 1170px;
+    }
+}
